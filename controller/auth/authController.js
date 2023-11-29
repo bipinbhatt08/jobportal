@@ -78,3 +78,7 @@ exports.login = async(req,res) =>{
     }
 }
 
+exports.renderForgotpassword = (req,res)=>{
+    res.render("forgotPassword")
+}
+
