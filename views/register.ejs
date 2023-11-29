@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finate | Job Portal - Registration</title>
+    <!-- Bootstrap JS -->
+
+    <!-- custom css included -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <!-- bootstrap css included -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+     <!-- fontAwesome inclued -->
+     <script src="https://kit.fontawesome.com/9cebbb4b18.js" crossorigin="anonymous"></script>
+     
+</head>
+<body>
+    <section class="hero-section ">
+        <!--======== HeaderStart ======-->
+        <%- include('./components/header.ejs') %>
+
+
+        <!--====== Header END =====-->
+        <hr class="mt-0 text-white " >
+        <!-- =====BreadCrumb   start=====-->
+        <div class="container breadcrumbs-container my5">
+                <div class="breadcrumb my-auto">
+                    <h1 class=" hero-heading  ">Register Page</h1>   
+                    <p class="paragraph-text nav-item"><a href="/" class="">Home</a> <span class="active-page">// Register</span></p>
+                </div>          
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+           <div class="row">
+            <div class="col-lg-2 col-md-2 col-2"></div>
+            <div class="col-lg-8 col-12">
+                <div class="register-form-container  ">
+                    <h1 class="register-now text-center py-2">Register Now</h1>
+                    <hr>
+                    <div class="text-center my-4">
+                        <button href="" class="register-page-btn mx-2 active-register-btn" id="candidate-register-btn" onclick=" candidateBtnClick()"><i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Candidate</button>
+                        <button href="" class="register-page-btn mx-2" id="employer-register-btn" onclick=" candidateBtnClick()"> <i class="fa-solid fa-briefcase"></i> &nbsp;Employer</button>
+                    </div>
+                    
+                    <!-- candidate-registraiton -->
+                    <form action="/register" method="post" class="register-form " id="candidate-registration">
+                        <input type="text" name="username" id="" class="mb-3 w-100" placeholder="Username (Candidate)">
+                        <br>
+                        <input type="email" name="email" id="" class="mb-3 w-100" placeholder="Email (Candidate)">
+                        <br>
+                        <input type="password" name="password" id="" class="mb-3 w-100" placeholder="Password">
+                        <br>
+                        <input type="password" name="confirmPassword" id=""  class=" w-100" placeholder="Confirm Password">
+                        <input type="text" name="role" value="candidate"  class=" w-100" hidden>
+
+                       <div  class="my-4"> <input type="checkbox" name="" id="" id="terms-checkbox" required>
+                        <a href="" id="terms-and-condition"> &nbsp; &nbsp;Accept our terms and condition and privacy policy</a>
+                        <p class="text-danger mt-3 " style="text-align: left; display: none; " id="terms">Terms and condition must be accepted to continue!!</p>
+
+                    </div>
+                        <button type="submit" id="register-submit-btn" class="w-100  register-page-btn " >Register Now</button>
+                    </form>
+                     <!-- employer-register -->
+                     <form action="/register" method="post" class="register-form hide-it" id="employer-registration">
+                        <input type="text" name="username" id="employer-name" class="mb-3 w-100" placeholder="Username (Employer)">
+                        <br>
+                        <input type="email" name="email" id="employer-name" class="mb-3 w-100" placeholder="Email (Employer)">
+                        <br>
+                        <input type="password" name="password" id="" class="mb-3 w-100" placeholder="Password">
+                        <br>
+                        <input type="password" name="confirmPassword" id=""  class=" w-100" placeholder="Confirm Password">
+                        <input type="text" name="role" value="employer" id=""  class=" w-100" hidden>
+                
+                       <div  class="my-4"> <input type="checkbox" name="" id="terms-checkbox" required>
+                        <a href="#" id="terms-and-condition"> &nbsp; &nbsp;Accept our terms and condition and privacy policy</a>
+                        <p class="text-danger mt-3  " style="text-align: left; display: none;" id="terms">Terms and condition must be accepted to continue!!</p>
+                    </div>
+                        <button type="submit" id="register-submit-btn" class="w-100  register-page-btn ">Register Now</button>
+                    </form>
+                    <p class="mt-4" style="color:var(--secondary-color)">Already have account? <a href="/login" class="active-page" style="text-decoration: none;">Sign In</a></p>
+                </div>
+            </div>
+           </div>
+        </div>
+    </section>
+    <%- include("./components/footer.ejs") %>
+</body>
+<script src="./index.js"></script>
+<script>
+    let checkbox=document.getElementById('terms-checkbox')
+
+    let activeForm='candidate'
+    let activeBtn='candidate'
+    let employerRegisterBtn=document.getElementById('employer-register-btn')
+    let employerRestrationForm=document.getElementById('employer-registration')
+
+    let candidateRegisterBtn=document.getElementById('candidate-register-btn')
+    let candidateRestrationForm=document.getElementById('candidate-registration')
+
+    function candidateBtnClick(){
+        if(activeBtn==='employer'){
+            candidateRegisterBtn.classList.remove('active-register-btn')
+            employerRegisterBtn.classList.add('active-register-btn')
+            employerRestrationForm.classList.remove('hide-it')
+            candidateRestrationForm.classList.add('hide-it')
+            activeBtn='candidate'
+        }
+        else{
+            candidateRegisterBtn.classList.add('active-register-btn')
+            employerRegisterBtn.classList.remove('active-register-btn')
+            employerRestrationForm.classList.add('hide-it')
+            candidateRestrationForm.classList.remove('hide-it')
+            
+            activeBtn='employer'
+        }
+    }
+
+
+
+    
+</script>
+</html>

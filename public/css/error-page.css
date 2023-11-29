@@ -1,0 +1,19 @@
+.error-image-container{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-image{
+    width: 100%;
+}
+.sorry-message{
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 150%;
+}
+@media screen and (max-width:776px) {
+    .sorry-message{
+        font-size: 24px ;
+}
+    }
