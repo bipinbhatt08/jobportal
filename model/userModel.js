@@ -23,9 +23,8 @@ module.exports = (sequelize, DataTypes) => {
       role : {
         type: DataTypes.STRING,
         allowNull : false
+      },
       
-      }
-      
-    });
+    },);
     return User;
   };

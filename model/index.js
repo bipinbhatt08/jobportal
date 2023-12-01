@@ -31,10 +31,23 @@ db.sequelize = sequelize;
 // importing model files 
 
 db.users = require("./userModel.js")(sequelize, DataTypes);
+db.jobs = require("./jobModel.js")(sequelize, DataTypes);
+db.employers = require("./employerModel.js")(sequelize, DataTypes);
+db.appliedJobs = require("./appliedJobModel.js")(sequelize, DataTypes);
+
+//Relationship 
+db.users.hasMany(db.appliedJobs)
+db.appliedJobs.belongsTo(db.users)
+
+db.employers.hasMany(db.jobs)
+db.jobs.belongsTo(db.employers)
+
+db.jobs.hasMany(db.appliedJobs);
+db.appliedJobs.belongsTo(db.jobs);
 
 
 
-db.sequelize.sync({ force: false }).then(() => {
+db.sequelize.sync({ force: true }).then(() => {
   console.log("yes re-sync done");
 });
 
