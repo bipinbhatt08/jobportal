@@ -4,12 +4,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      about : {
-        type:DataTypes.TEXT,
-        allowNull : false
+      userId:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
       },
-
-      
-    });
+    })
     return Applied;
   };

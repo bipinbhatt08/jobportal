@@ -36,10 +36,10 @@ module.exports = (sequelize, DataTypes) => {
         type:DataTypes.DATE,
         allowNull : false
       },
-     postedBy : {
+     employerId : {
         type : DataTypes.INTEGER,
         allowNull: false
      }
-    });
+    })
     return Job;
   };

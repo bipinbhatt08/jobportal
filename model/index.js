@@ -32,18 +32,23 @@ db.sequelize = sequelize;
 
 db.users = require("./userModel.js")(sequelize, DataTypes);
 db.jobs = require("./jobModel.js")(sequelize, DataTypes);
-db.employers = require("./employerModel.js")(sequelize, DataTypes);
+db.employers = require("./employerProfileModel.js")(sequelize, DataTypes);
+db.candidates = require("./candidateProfileModel.js")(sequelize, DataTypes);
 db.appliedJobs = require("./appliedJobModel.js")(sequelize, DataTypes);
 
-//Relationship 
-db.users.hasMany(db.appliedJobs)
-db.appliedJobs.belongsTo(db.users)
+// Relationships
+db.users.hasOne(db.employers, { foreignKey: 'userId', onDelete: 'CASCADE', constraints: false });
+db.employers.belongsTo(db.users, { foreignKey: 'userId', onDelete: 'CASCADE', constraints: false });
 
-db.employers.hasMany(db.jobs)
-db.jobs.belongsTo(db.employers)
+db.users.hasOne(db.candidates, { foreignKey: 'userId', onDelete: 'CASCADE', constraints: false });
+db.candidates.belongsTo(db.users, { foreignKey: 'userId', onDelete: 'CASCADE', constraints: false });
 
-db.jobs.hasMany(db.appliedJobs);
-db.appliedJobs.belongsTo(db.jobs);
+db.employers.hasMany(db.jobs, { as: 'employer', foreignKey: 'employerId' });
+db.jobs.belongsTo(db.employers, { as: 'employer', foreignKey: 'employerId' });
+
+db.candidates.hasMany(db.appliedJobs, { foreignKey: 'userId', onDelete: 'CASCADE', constraints: false });
+db.appliedJobs.belongsTo(db.candidates, { foreignKey: 'userId', onDelete: 'CASCADE', constraints: false });
+
 
 
 

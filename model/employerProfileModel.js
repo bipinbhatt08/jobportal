@@ -27,6 +27,10 @@ module.exports = (sequelize, DataTypes) => {
       about : {
         type:DataTypes.TEXT,
         allowNull : false
+      },
+      userId:{
+        type: DataTypes.INTEGER,
+        allowNull : false
       }
     });
     return Employer;
