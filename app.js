@@ -36,8 +36,10 @@ app.get("/",(req,res)=>{
 
 const authRoute = require("./routes/auth/authRoutes.js")
 const employerRoute = require("./routes/employer/employerRoutes.js")
+const candidateRoute = require("./routes/candidate/candidateRoutes.js")
 app.use("",authRoute)
 app.use("",employerRoute)
+app.use("",candidateRoute)
 
 
 app.listen(3101,() => {

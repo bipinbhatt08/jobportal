@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finate | Job Portal - Candidat Details</title>
+    
+    <!-- custom css included -->
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/register.css"> -->
+
+
+    <!-- bootstrap css included -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-eNp0OSW9qZlE5P2R1V1PJVlWr59Upv2Jz4pXTaUQx0FhFu4pGgF6GzDqrik3iX3l" crossorigin="anonymous"></script>
+
+
+     <!-- fontAwesome inclued -->
+     <script src="https://kit.fontawesome.com/9cebbb4b18.js" crossorigin="anonymous"></script>
+     <style>
+        .secondary-heading{
+            color: red;
+            font-size: 18px !important;
+            font-weight: 700;
+            color: #272a33 !important;
+        }
+     </style>
+</head>
+<body>
+    <section class="hero-section ">
+        <!--======== HeaderStart ======-->
+        <%- include('./components/header.ejs') %>
+
+        <!--====== Header END =====-->
+        <hr class="mt-0 text-white " >
+        <!-- =====BreadCrumb   start=====-->
+        <div class="container breadcrumbs-container my5">
+                <div class="breadcrumb my-auto">
+                    <h1 class=" hero-heading  ">Candidate Details</h1>   
+                    <p class="paragraph-text nav-item"><a href="/" class="">Home </a> <span class="active-page"> &nbsp; // Candidate Details</span></p>
+                </div>          
+        </div>
+    </section>
+    <section class="section pb-5">
+        <div class="container">
+            <!-- First row start -->
+           <div class="job-detail-first-row p-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-7 col-12  display-flex   job-detail-job-and-salary">
+                    <div class="job-detail-company-logo my-auto">
+                        <img src="https://media.licdn.com/dms/image/C4E03AQEvK6NX6ui0eQ/profile-displayphoto-shrink_800_800/0/1647097725077?e=2147483647&v=beta&t=RVMRGIaUmVUnSugnOVuZ7v-KveohZzRfRcUqYecxOFM" alt="">
+                    </div>
+                    <div class="job-detail-info mx-4 my-auto">
+                        <h3 class="section-heading job-detail-job my-1">Bhaskar Saud</h3>
+                        <p class="job-detail-company-name my-1">Frontend Developer</p>
+                        <p class="job-detail-company-address "><i class="fa-solid fa-location-dot"></i> Mahendranagar, Nepal &nbsp; <i class="fa-solid fa-phone"></i> +977 9810779998</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-5 col-12 my-auto company-and-job ">
+                    <div class="candiate-detail-buttons my-3">
+                            <div><a href="#" class="apply-now-btn job-detail-apply-btn " id="upper-button">&nbsp; &nbsp; &nbsp; &nbsp; Short List &nbsp;&nbsp; &nbsp; &nbsp;</a></div>
+                            
+                            <div><a href="#" class="apply-now-btn job-detail-apply-btn">Download Resume</a></div>
+                    </div>
+                </div>
+            </div>
+           </div>
+           <!-- second row start -->
+           <div class="job-detail-second-row my-5">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 col-12">
+                        <!-- about candidate -->
+                        <div class="description ">
+                            <h3 class="section-heading mt-4">About Candidate</h3>
+
+                            <p>It is a long established fact that a reader will be distracted the readable content of page when looking atits layout. The point of using is that has more-or-less normal a distribution of letters, as opposed to usin content publishing packages web page editors. It is a long established fact that a reader will be distracts by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that has look like readable publishing packages and web page editors.
+
+                            </p>
+
+                            <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout. The point of using is that has more-or-less normal a distribution of letters, as opposed to usin content publishing packages web page editors.</p>
+                        </div>
+                        <div class="education ">
+                            <h3 class="section-heading">Education</h3>
+                            <div class="border-box-container my-4">
+                                <div class="left-border-box">
+                                    <p class="mb-0"><span class="secondary-heading ">Graphics Design</span><b class=""> // 2021-2022</b></p> 
+                                    <p class="primary-color my-2" ><b>IT Zone Computer</b></p>
+                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                                </div>
+                                <div class="left-border-box">
+                                    <p class="mb-0"><span class="secondary-heading ">Intermediate in Science </span><b class=""> // 2018-2020</b></p> 
+                                    <p class="primary-color my-2" ><b>Little Buddha Academey Secondary School</b></p>
+                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                                </div>
+                                <div class="left-border-box">
+                                    <p class="mb-0"><span class="secondary-heading ">Frontend Development</span><b class=""> // 2023-2024</b></p> 
+                                    <p class="primary-color my-2" ><b>IT Zone Computer</b></p>
+                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-and-experience ">
+                            <h3 class="section-heading">Work and Experience</h3>
+                            <div class="border-box-container my-4">
+                                <div class="left-border-box">
+                                    <p class="mb-0"><span class="secondary-heading ">Graphics Design</span><b class=""> // 2022-Present</b></p> 
+                                    <p class="primary-color my-2" ><b>Sofsee Tech</b></p>
+                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                                </div>
+                                <div class="left-border-box">
+                                    <p class="mb-0"><span class="secondary-heading ">Intermediate in Science </span><b class=""> // 2018-2020</b></p> 
+                                    <p class="primary-color my-2" ><b>Little Buddha Academey Secondary School</b></p>
+                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                                </div>
+                                <div class="left-border-box">
+                                    <p class="mb-0"><span class="secondary-heading ">Frontend Development</span><b class=""> // 2023-2024</b></p> 
+                                    <p class="primary-color my-2" ><b>IT Zone Computer</b></p>
+                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                       
+                        <!-- Skills -->
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="professional-skill">
+                                    <h3 class="section-heading mt-4"> Professional Skills</h3>
+                                    <ul>
+                                        <li>Web Application Design</li>
+                                        <li>UI Design</li>
+                                        <li>Mobile App Design</li>
+                                        <li>User Experience</li>
+                                        <li> Problem Solving</li>
+                                        <li>Landing Page Design</li>
+                                        <li>Branding & Identity</li>
+                                        <li>Prototyping</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6"><div class="software-skill">
+                                <h3 class="section-heading mt-4"> Software Skills</h3>
+                                <ul>
+                                    <li>Adobe Photoshop</li>
+                                    <li>Figma</li>
+                                    <li>Microsoft Word</li>
+                                    <li>Microsoft Excel</li>
+                                    <li>Microsoft PowerPoint</li>   
+                                </ul>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-12 my-lg-5 my-sm-3">
+                            <div class="side-boxes p-5 ">
+                                <h3 class="section-heading">Information</h3>
+                                <hr class="heading-underline  mb-4"><div class="">
+                                <div class="container px-0">
+                                        <div class="row">
+                                        
+                                            <!--  Category -->
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Category   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="category">Developement</span></p>
+                                            </div>
+                                            <!--  Offered Salary -->
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Offered Salary   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="offered-salary">Rs 25,000 / Monthly</span></p>
+                                            </div>
+                                            
+                                            <!--  Experience -->
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Experience   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="experience"> 05 </span> Years</p>
+                                            </div>
+                                            <!--  Language -->
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Language   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="language"> English, Nepali </span></p>
+                                            </div>
+                                            <!--  Gender -->
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Gender   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gender"> Male</span> </p>
+                                            </div>
+                                            <!--  Qualification -->
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Qualification   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="qualification"> BSc</span> </p>
+                                            </div>
+                                            <!--  Level -->
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Level   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="Level"> Junior</span> </p>
+                                            </div>
+                                           
+                                            <!--  Views -->
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Views    
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="views" > 243</span> </p>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="side-boxes p-5 mt-5 ">
+                                <h3 class="section-heading">Share With</h3>
+                                <hr class="heading-underline  mb-4">
+                                <div class="container px-0">
+                                    <div class="row">
+                                        <div class="col-lg-2-col-md-2 col-2 side-box-icon-container ">
+                                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                        </div>
+                                        <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
+                                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                        </div>
+                                        <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
+                                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                        </div>
+                                        <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
+                                        <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                        <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
+                                        <a href=""> <i class="fa-brands fa-skype"></i></a>
+                                        </div>
+                                        <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
+                                        <a href=""> <i class="fa-brands fa-whatsapp"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="side-boxes p-5 mt-5 ">
+                                    <h3 class="section-heading">Contact Form</h3>
+                                    <hr class="heading-underline  mb-4">
+                                    <form action="" method="post" class="candidate-contact-form">
+                                        <input type="text" class="w-100 mb-3" name="name" placeholder="Name"> <br>
+                                        <input type="email" class="w-100 mb-3" name="email" placeholder="Email"> <br>
+                                        <textarea name="message" id="" class="w-100 mb-3 "  cols="30" rows="5" placeholder="Message"></textarea>
+                                        <button type="submit" class="apply-now-btn job-detail-apply-btn w-100" >Send Message</button>
+                                    </form>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter w-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 col-md-12">
+                        <h3 class="text-white newsletter-text" >Subscribe for everyday job Newsletter.</h3>
+                    </div>
+                    <div class="col-lg-6 col-12 col-md-12 ">
+                       <form action="" id="newsletter-form">
+                            <div class="email-subscription">
+                                <div class="input-wrapper">
+                                <input type="email" placeholder="Enter your email address" />
+                                <button type="submit">Subscribe Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include("./components/footer.ejs") %>
+
+</footer>
+</body>
+<script src="/js/index.js"></script>
+</html>
