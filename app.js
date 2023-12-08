@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get("/",(req,res)=>{
-    res.send("Welcome to our site")
+    res.render("home")
 })
 
 

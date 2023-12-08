@@ -1,0 +1,637 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finate | Job Portal - Home</title>
+    <!-- Bootstrap JS -->
+
+    <!-- custom css included -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- bootstrap css included -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+     <!-- fontAwesome inclued -->
+     <script src="https://kit.fontawesome.com/9cebbb4b18.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="hero-section ">
+        <!--======== HeaderStart ======-->
+        <%- include('./components/header.ejs') %>
+
+        <!--====== Header END =====-->
+        <hr class="mt-0 text-white " >
+        <!-- =====Actaul hero section start=====-->
+        <div class="actual-hero-section ">
+           <div class="animation-image-container">
+            <img src="/images/left-animation-image.webp" alt="" id="animation-image">
+           </div>
+            <div class="container ">
+                <h1 class=" hero-heading text-center "><span id="job-counter" style="color:#038f42 ;font-size:42px"></span> job available</h1>
+                <h1 class="hero-heading text-center">You can choose your dream job</h1>
+                <p class="paragraph-text text-white text-center mt-4">Find great job for build your bright career. Have many job in this plactform.</p>
+                <form action="" id="hero-section-form">
+                    <div class="row  ">
+                        <div class="col-lg-1 col-md-2 "></div>
+                        <div class="col-lg-11">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 ">
+                                        <input type="text" placeholder="Job title or keywords"  >
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 topmargin-mobile" >
+                                        <select name="" id="" >
+                                            <option value="">Choose City</option>
+                                            <option value="">Mahendranagar</option>
+                                            <option value="">Dhangadhi</option>
+                                            <option value="">Belauri</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 topmargin-tab-mobile" >
+                                        <select name="" id="">
+                                            <option value="">Category</option>
+                                            <option value="">Web Developer</option>
+                                            <option value="">UI/UX </option>
+                                            <option value="">Java Developer</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 col-md-6 topmargin-tab-mobile" >
+                                        <button type=""  id="search-btn"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Search </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+             </div>
+        </div>
+    </section>
+     <!-- ==================Popular-jobs section ======================-->
+    <section class="popluar-jobs section">
+        <div class="container">
+            <div class="section-heading-description text-center">
+                <h3 class="section-heading">Popular Category</h3>
+                <p class="section-description ">
+                    Many desktop publishing packages and web page editors
+                </p>
+            </div>
+            <div class="row ">
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-4 ">
+                    <a class="popular-job-item">
+                       Education/Training (<span class="job-counter" style="font-size: 14px;">98</span>)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================recent-jobs section ======================-->
+    <section class="recent-jobs section">
+        <div class="container">
+            <div class="section-heading-description text-center">
+                <h3 class="section-heading">Recent Job Circulars</h3>
+                <p class="section-description ">
+                    Many desktop publishing packages and web page editors
+                </p>
+            </div>
+            <div class="row">
+                <div class="recent-jobs-container">
+                    <div class="container ">
+                        <div class="row ">
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="recent-job-item">
+                                    <div class="company-info mb-3">
+                                        <div class="clogo-container">
+                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                                        </div>
+                                        <div class="cname-and-caddress mx-4">
+                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
+                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="job">
+                                        <a href="#" >Backend Developer</a>
+                                    </div>
+                                    <p class="job-time">Full-time</p>
+                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
+                                    <div class="salary-and-button">
+                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                        <a href="#" class="apply-now-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="recent-job-item">
+                                    <div class="company-info mb-3">
+                                        <div class="clogo-container">
+                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                                        </div>
+                                        <div class="cname-and-caddress mx-4">
+                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
+                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="job">
+                                        <a href="#" >Backend Developer</a>
+                                    </div>
+                                    <p class="job-time">Full-time</p>
+                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
+                                    <div class="salary-and-button">
+                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                        <a href="#" class="apply-now-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="recent-job-item">
+                                    <div class="company-info mb-3">
+                                        <div class="clogo-container">
+                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                                        </div>
+                                        <div class="cname-and-caddress mx-4">
+                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
+                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="job">
+                                        <a href="#" >Backend Developer</a>
+                                    </div>
+                                    <p class="job-time">Full-time</p>
+                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
+                                    <div class="salary-and-button">
+                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                        <a href="#" class="apply-now-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="recent-job-item">
+                                    <div class="company-info mb-3">
+                                        <div class="clogo-container">
+                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                                        </div>
+                                        <div class="cname-and-caddress mx-4">
+                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
+                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="job">
+                                        <a href="#" >Backend Developer</a>
+                                    </div>
+                                    <p class="job-time">Full-time</p>
+                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
+                                    <div class="salary-and-button">
+                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                        <a href="#" class="apply-now-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="recent-job-item">
+                                    <div class="company-info mb-3">
+                                        <div class="clogo-container">
+                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                                        </div>
+                                        <div class="cname-and-caddress mx-4">
+                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
+                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="job">
+                                        <a href="#" >Backend Developer</a>
+                                    </div>
+                                    <p class="job-time">Full-time</p>
+                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
+                                    <div class="salary-and-button">
+                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                        <a href="#" class="apply-now-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="recent-job-item">
+                                    <div class="company-info mb-3">
+                                        <div class="clogo-container">
+                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                                        </div>
+                                        <div class="cname-and-caddress mx-4">
+                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
+                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="job">
+                                        <a href="#" >Backend Developer</a>
+                                    </div>
+                                    <p class="job-time">Full-time</p>
+                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
+                                    <div class="salary-and-button">
+                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                        <a href="#" class="apply-now-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="recent-job-item">
+                                    <div class="company-info mb-3">
+                                        <div class="clogo-container">
+                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                                        </div>
+                                        <div class="cname-and-caddress mx-4">
+                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
+                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="job">
+                                        <a href="#" >Backend Developer</a>
+                                    </div>
+                                    <p class="job-time">Full-time</p>
+                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
+                                    <div class="salary-and-button">
+                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                        <a href="#" class="apply-now-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="recent-job-item">
+                                    <div class="company-info mb-3">
+                                        <div class="clogo-container">
+                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                                        </div>
+                                        <div class="cname-and-caddress mx-4">
+                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
+                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        </div>
+                                    </div>
+                                    <div class="job">
+                                        <a href="#" >Backend Developer</a>
+                                    </div>
+                                    <p class="job-time">Full-time</p>
+                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
+                                    <div class="salary-and-button">
+                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                        <a href="#" class="apply-now-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================How it works section====================== -->
+    <section class="how-it-works section">
+        <div class="container">
+            <div class="section-heading-description text-center">
+                <h3 class="section-heading">How It Works?</h3>
+                <p class="section-description ">
+                    Many desktop publishing packages and web page editors
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="step-of-working text-center">
+                        <img src="/images/right-arrow.webp" class="right-arrow-img"></img>
+                        <div class="step-icon ">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <h3 class="step-title   mt-4 mb-3">
+                          Create an Account
+                        </h3> 
+                        <p class="step-description" >It is long established fact reader distracted readable content</p> 
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="step-of-working text-center">
+                        <img src="/images/right-arrow.webp" class="right-arrow-img"></img>
+                        <div class="step-icon ">
+                            <i class="fa-solid fa-file-lines" ></i>
+                        </div>
+                        <h3 class="step-title   mt-4 mb-3">
+                          CV/Resume
+                        </h3> 
+                        <p class="step-description" >It is long established fact reader distracted readable content</p> 
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="step-of-working text-center">
+                        <img src="/images/right-arrow.webp" class="right-arrow-img"></img>
+                        <div class="step-icon ">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h3 class="step-title   mt-4 mb-3">
+                            Find Your Job
+                        </h3> 
+                        <p class="step-description" >It is long established fact reader distracted readable content</p> 
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="step-of-working text-center">
+                        <!-- <img src="./images/right-arrow.webp" class="right-arrow-img"></img> -->
+                        <div class="step-icon ">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+                        <h3 class="step-title   mt-4 mb-3">
+                           Save & Apply
+                        </h3> 
+                        <p class="step-description" >It is long established fact reader distracted readable content</p> 
+                    </div>                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- ==================best-candidate-jobs section ======================-->
+    <section class="best-candidate section">
+        <div class="container">
+            <div class="section-heading-description text-center">
+                <h3 class="section-heading">Best Candidate</h3>
+                <p class="section-description ">
+                    Many desktop publishing packages and web page editors
+                </p>
+            </div>
+            <div class="row">
+                    <!-- item first -->
+                    <div class="col-lg-3 col-md-6 co-12 mt-4 ">
+                        <div class="best-candidate-item text-center">
+                            <div class="bookmark-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="candidate-image-container text-center">
+                                <img src="/images/candidate-image.webp" class="candidate-image" alt="">
+                            </div>
+                            <div class="best-candidate-info mt-4">
+                                <h3 class="cname candidate-name">
+                                    Ramchandra Poudel
+                                </h3>
+                                <p class="candidate-job mt-0">
+                                    Front-end Developer
+                                </p>
+                                <div class="rating my-2" >
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                </div>
+                                <div class="required-skill">
+                                    CSS3, HTML5, Javascript, Bootstrap, Jquery
+                                </div>
+                                <div class=" pt-4 ">
+                                    <a href="#" class="view-profile-btn apply-now-btn ">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 co-12 mt-4 ">
+                        <div class="best-candidate-item text-center">
+                            <div class="bookmark-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="candidate-image-container text-center">
+                                <img src="/images/candidate-image.webp" class="candidate-image" alt="">
+                            </div>
+                            <div class="best-candidate-info mt-4">
+                                <h3 class="cname candidate-name">
+                                    Ramchandra Poudel
+                                </h3>
+                                <p class="candidate-job mt-0">
+                                    Front-end Developer
+                                </p>
+                                <div class="rating my-2" >
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                </div>
+                                <div class="required-skill">
+                                    CSS3, HTML5, Javascript, Bootstrap, Jquery
+                                </div>
+                                <div class=" pt-4 ">
+                                    <a href="#" class="view-profile-btn apply-now-btn ">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 3rd -->
+                    <div class="col-lg-3 col-md-6 co-12 mt-4 ">
+                        <div class="best-candidate-item text-center">
+                            <div class="bookmark-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="candidate-image-container text-center">
+                                <img src="/images/candidate-1.jpg" class="candidate-image" alt="">
+                            </div>
+                            <div class="best-candidate-info mt-4">
+                                <h3 class="cname candidate-name">
+                                    Ramchandra Poudel
+                                </h3>
+                                <p class="candidate-job mt-0">
+                                    Front-end Developer
+                                </p>
+                                <div class="rating my-2" >
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                </div>
+                                <div class="required-skill">
+                                    CSS3, HTML5, Javascript, Bootstrap, Jquery
+                                </div>
+                                <div class=" pt-4 ">
+                                    <a href="#" class="view-profile-btn apply-now-btn ">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 4th -->
+                    <div class="col-lg-3 col-md-6 co-12 mt-4 ">
+                        <div class="best-candidate-item text-center">
+                            <div class="bookmark-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="candidate-image-container text-center">
+                                <img src="/images/candidate-1.jpg" class="candidate-image" alt="">
+                            </div>
+                            <div class="best-candidate-info mt-4">
+                                <h3 class="cname candidate-name">
+                                    Ramchandra Poudel
+                                </h3>
+                                <p class="candidate-job mt-0">
+                                    Front-end Developer
+                                </p>
+                                <div class="rating my-2" >
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                    <i class="fa-solid fa-star"></i> 
+                                </div>
+                                <div class="required-skill">
+                                    CSS3, HTML5, Javascript, Bootstrap, Jquery
+                                </div>
+                                <div class=" pt-4 ">
+                                    <a href="#" class="view-profile-btn apply-now-btn ">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+            <div class="newsletter w-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 col-md-12">
+                            <h3 class="text-white newsletter-text" >Subscribe for everyday job Newsletter.</h3>
+                        </div>
+                        <div class="col-lg-6 col-12 col-md-12 ">
+                           <form action="" id="newsletter-form">
+                                <div class="email-subscription">
+                                    <div class="input-wrapper">
+                                    <input type="email" placeholder="Enter your email address" />
+                                    <button type="submit">Subscribe Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12  footer-company-info">
+                            <div class="footer-logo-container mb-0 mt-0 ">
+                                <img src="/images/green logo.webp" id="footer-logo" alt="">
+                            </div>
+                            <p class="footer-text mt-4 w-75">That necessitat ecommerce platform that optimi your store popularised the release</p>
+                            <div class="footer-social-icons my-5">
+                                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3  ">
+                            <h3 class="section-heading text-white  mb-5">
+                                Company
+                            </h3>
+                            <ul class=" footer-list">
+                               <li><a href="">About Us</a></li>
+                               <li><a href="">Why Extobot</a></li>
+                               <li><a href="./contact.html">Contact With Us</a></li>
+                               <li><a href="">Our Partners</a></li>
+                            </ul>
+                        </div>
+                        <!-- Resources -->
+                        <div class="col-lg-2 col-md-3 col-6 ">
+                            <h3 class="section-heading text-white  mb-5">
+                                Resources
+                            </h3>
+                            <ul class=" footer-list ">
+                               <li><a href="">Quick Links</a></li>
+                               <li><a href="">Job Packages</a></li>
+                               <li><a href="">Post New Job</a></li>
+                               <li><a href="">Job Listings</a></li>
+                            </ul>
+                        </div>
+                        <!-- Legal -->
+                        <div class="col-lg-2 col-md-3 ">
+                            <h3 class="section-heading text-white  mb-5">
+                                Legal
+                            </h3>
+                            <ul class=" footer-list">
+                               <li><a href="">Affiliate</a></li>
+                               <li><a href="">Blog</a></li>
+                               <li><a href="">Help & Support</a></li>
+                               <li><a href="">Careers</a></li>
+                            </ul>
+                        </div>
+                        <!-- Products -->
+                        <div class="col-lg-2 col-md-3 ">
+                            <h3 class="section-heading text-white  mb-5">
+                                Products
+                            </h3>
+                            <ul class="footer-list">
+                               <li><a href="">Start a Trail</a></li>
+                               <li><a href="">How It Works</a></li>
+                               <li><a href="">Features</a></li>
+                               <li><a href="">Price & Planning</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="text-white ">
+                    <p class="footer-text text-center mt-4">
+                        &copy; 2023 Finate. Made with <span style="color:var(--primary-color)"><b>&#x2764;</b></span> by <span style="color:var(--primary-color)"><b>Bipin Bhatt</b></span> 
+                    </p>
+                </div>
+                <!-- For MObile Dropdown -->
+               
+            </div>
+    </footer>
+    <!-- bootstrap js inculded -->
+   <!-- jQuery and Bootstrap JavaScript files -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+<script src="/js/index.js"></script>
+</html>
+
+
+
+
+

@@ -52,7 +52,7 @@ db.appliedJobs.belongsTo(db.candidates, { foreignKey: 'userId', onDelete: 'CASCA
 
 
 
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   console.log("yes re-sync done");
 });
 
