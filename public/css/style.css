@@ -918,4 +918,108 @@ body{
     width: 15%;
     height: 2px;
 }
+/* =============Candidate Dashboard Css ==========*/
+.candidate-dashboard{
+    background: var(--background-color);
+}
+.dashboard-form{
+    background: var(--background-color);
+    /* padding: 20px; */
+}
+.dashboard-form input:not([type="radio"]),select,textarea{
+    padding: 8px;
+    border-radius: 5px;
+    border:none;
+    outline: 1px solid var(--footer-text-color);
+    background-color: white;
+}
+.dashboard-form select{
+    color: var(--secondary-color);
+    /* background-color: red; */
+}
+
+.dashboard-form input:focus,select:focus{
+    outline: 1px solid var(--primary-color);
+}
+.dashboard-form label{
+    font-weight: 500;
+}
+.education-table,.education-table tr,.education-table td,.education-table th{
+    border: 2px solid  var(--secondary-color);
+}
+.education-table th{
+    padding: 5px 10px;
+}
+.education-table td{
+    padding: 10px 5px;
+}
+.education-table tr:nth-child(even){
+    background-color: var(--footer-text-color);
+}
+.delete-btn{
+    color: rgb(234, 28, 28);
+}
+.add-education-btn a{
+    text-decoration: none;
+
+    border: 1px solid blue;
+    border-top:none;
+    padding: 5px ;
+}
+
+.dashboard-menu{
+    border: 1px solid  var(--footer-text-color);
+    border-radius: 5px;
+    /* border-bottom: none; */
+    /* width: 1 00%; */
+    /* height: 100vh; */
+    /* padding: 10px 0px; */
+}
+.profile-and-name{
+    /* border-bottom: 1px solid var(--footer-text-color); */
+    padding: 20px 10px;
+}
+.profile-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+
+}
+.profile-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.dashboard-menu-list{
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* gap: 10px; */
+}
+.dashboard-menu-list li{
+    border-top: 1px dotted var(--footer-text-color);
+}
+.dashboard-menu-list li a{
+    padding: 10px;
+    display: block;
+    color:#656565;
+    /* border: 1px solid red; */
+    text-decoration: none;
+}
+.dashboard-menu-list li a:hover{
+    color:var(--primary-color);
+}
+.dashboard-menu i{
+    margin-right: 10px;
+}
+/* =============Footer DropDown==========*/
+
+
 

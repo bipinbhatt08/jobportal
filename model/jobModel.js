@@ -12,10 +12,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull : false
       },
-      category:{
-        type: DataTypes.STRING,
-        allowNull:false
-      },
       jobLevel:{
         type: DataTypes.STRING,
         allowNull:false
@@ -33,13 +29,21 @@ module.exports = (sequelize, DataTypes) => {
         allowNull : false
       },
       deadLine : {
-        type:DataTypes.DATE,
+        type:DataTypes.STRING,
         allowNull : false
       },
-     employerId : {
-        type : DataTypes.INTEGER,
-        allowNull: false
-     }
+      requiredSkills:{
+        type: DataTypes.STRING,
+        allowNull : false
+      },
+      jobTime:{
+        type: DataTypes.STRING,
+        allowNull : false
+      },
+      workLocation:{
+        type: DataTypes.ENUM('remote', 'physical', 'both'),
+        allowNull: false,
+      },
     })
     return Job;
   };

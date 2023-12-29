@@ -32,7 +32,8 @@ exports.register = async(req,res)=>{
         role : role,
         password : bcrypt.hashSync(password,8)
     })
-    res.send("Registerd succesfully")
+    // res.send("Registerd succesfully")
+    res.redirect("login")
 }
 
 exports.renderLoginForm = (req,res)=>{
