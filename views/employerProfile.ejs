@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-7 col-12  display-flex   job-detail-job-and-salary">
                     <div class="job-detail-company-logo my-auto">
-                        <img src="https://media.licdn.com/dms/image/C4E03AQEvK6NX6ui0eQ/profile-displayphoto-shrink_800_800/0/1647097725077?e=2147483647&v=beta&t=RVMRGIaUmVUnSugnOVuZ7v-KveohZzRfRcUqYecxOFM" alt="">
+                        <img src="/uploads/<%-employerFound.profileImage%>" alt="">
                     </div>
                     <div class="job-detail-info mx-4 my-auto">
                         <h3 class="section-heading job-detail-job my-1"><%- employerFound?.name %></h3>
@@ -77,9 +77,9 @@
 
                         <!-- about candidate -->
                         <div class="description ">
-                            <h3 class="section-heading mt-2">About Candidate</h3>
+                            <h3 class="section-heading mt-2">About Employer</h3>
 
-                            <p>It is a long established fact that a reader will be distracted the readable content of page when looking atits layout. The point of using is that has more-or-less normal a distribution of letters, as opposed to usin content publishing packages web page editors. It is a long established fact that a reader will be distracts by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that has look like readable publishing packages and web page editors.
+                            <p><%- employerFound?.about %>
 
                             </p>
 

@@ -15,10 +15,10 @@ var storage = multer.diskStorage({
     }
 
 
-    cb(null, "./uploads/");//duita xa vane success
+    cb(null, "./public/uploads/");//duita xa vane success
   },
   filename: function (req, file, cb) {
-    cb(null, Date.now() + "-" + file.originalname);
+    cb(null, (Date.now() + "-" + file.originalname).replace(" ",""));
   },
 });
 

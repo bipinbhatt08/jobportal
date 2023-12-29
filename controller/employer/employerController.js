@@ -20,9 +20,11 @@ exports.createEmployerProfile = async(req,res)=>{
     if(userExists.length===0){
         return res.send("User Does not exists or you are not employer")
     }
-     
+
+    const profileImage = req.file.filename
+    
     await employers.create({
-        name,location,employerCategory,contactNo,website,about,userId:id
+        name,location,employerCategory,contactNo,website,about,userId:id,profileImage
     })
 
     return res.send("Profile created succesfully")
@@ -36,7 +38,7 @@ exports.employerProfile = async(req,res)=>{
         {include: [
             {
               model: users,
-              attributes: { exclude: ['password','createdAt','updatedAt'] }, // Exclude the 'password' column
+              attributes: { exclude: ['password','createdAt','updatedAt',''] }, // Exclude the 'password' column
             },
         ]})
         console.log(employerFound,"HELLo")
@@ -46,9 +48,6 @@ exports.employerProfile = async(req,res)=>{
     res.render('employerProfile', { employerFound });
     
 }
-
-
-
 
 exports.postJob = async(req,res)=>{
     const userId = req.user.id
