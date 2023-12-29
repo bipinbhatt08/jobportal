@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const Employer = sequelize.define("employer", { //you user le garda table banxa ra users banxa not he user
-      Name: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -15,10 +15,6 @@ module.exports = (sequelize, DataTypes) => {
       contactNo:{
         type: DataTypes.INTEGER,
         allowNull:false
-      },
-      email: {
-        type: DataTypes.STRING,
-        allowNull: false,
       },
       website : {
         type: DataTypes.STRING,
