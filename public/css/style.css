@@ -473,7 +473,7 @@ body{
     color: var(--primary-color);
 }
 .job-time{
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     font-weight: 600;
     text-align: left;
 }
@@ -1019,7 +1019,48 @@ body{
 .dashboard-menu i{
     margin-right: 10px;
 }
-/* =============Footer DropDown==========*/
+/* =============EMPLOYER DETAILS==========*/
 
+.job-count-container{
+    
+    width: 80px;
+    height: 80px;
+    margin: 0px 10px;
+    /* padding:10px 20px ; */
+    /* padding-bottom: 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.8s;
 
+}
 
+.job-count-container:hover{
+    background: var(--primary-color);
+    
+}
+.job-count-container:hover p {
+    color: white
+}
+.job-count-container:hover h2{
+    color:white;
+}
+.job-count-container p{
+    /* border: 1px solid red; */
+    margin: 0px !important;
+    text-align: center;
+    transition: all 0.8s;
+}
+.job-count-container h2{
+    /* border: 1px solid red; */
+    transition: all 0.8s;
+}
+.coutnter-container{
+    /* border: 1px solid red; */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

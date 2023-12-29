@@ -56,15 +56,25 @@
                     </div>
                     <div class="job-detail-info mx-4 my-auto">
                         <h3 class="section-heading job-detail-job my-1"><%- employerFound?.name %></h3>
-                        <p class="job-detail-company-name my-1">Frontend Developer</p>
+                        <p class="job-detail-company-name my-1"><%- employerFound?.employerCategory %></p>
                         <p class="job-detail-company-address "><i class="fa-solid fa-location-dot"></i> <%- employerFound?.location %>&nbsp; <i class="fa-solid fa-phone"></i> <%- employerFound?.contactNo %></p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-5 col-12 my-auto company-and-job ">
-                    <div class="candiate-detail-buttons my-3">
-                            <div><a  class="apply-now-btn job-detail-apply-btn " id="upper-button">&nbsp; &nbsp; &nbsp;Send Email &nbsp;&nbsp; &nbsp; &nbsp;</a></div>
-                            
-                            <div><a href="#" class="apply-now-btn job-detail-apply-btn">Download Resume</a></div>
+                <div class="col-lg-6 col-md-5 col-12  ">
+                    <div class=" coutnter-container">
+                        
+                        <div class="job-count-container  ">
+                           <div class="oks">
+                            <h2 class="section-heading text-center "><%- myJobs.length%></h2> 
+                            <p class="job-detail-company-name text-center ">Jobs</p>
+                           </div>
+                        </div>
+                        <div class="job-count-container  ">
+                           <div class="oks">
+                            <h2 class="section-heading text-center ">34</h2> 
+                            <p class="job-detail-company-name text-center ">Reviews</p>
+                           </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,42 +95,46 @@
 
                         </div>
                         <!-- Skills -->
-                        <div class="row">
-                            <div class="col-lg-12"><div class="software-skill">
-                                <h3 class="section-heading mt-2"> Skills</h3>
-                                <ul>
-                                    <li>Adobe Photoshop</li>
-                                    <li>Figma</li>
-                                    <li>Microsoft Word</li>
-                                    <li>Microsoft Excel</li>
-                                    <li>Microsoft PowerPoint</li>   
-                                </ul>
-                            </div></div>
-                        </div>
-                        <div class="education ">
-                            <h3 class="section-heading">Education</h3>
-                            <div class="border-box-container my-4">
-                                <div class="left-border-box">
-                                    <p class="mb-0"><span class="secondary-heading ">Graphics Design</span><b class=""> // 2021-2022</b></p> 
-                                    <p class="primary-color my-2" ><b>IT Zone Computer</b></p>
-                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                            <div class="col-lg-12">
+                                <div class="software-skill">
+                                <h3 class="section-heading mt-2"> Open Positions</h3>
+                                <div class="row ">
+                                    <% myJobs.forEach((job)=>{ %>
+                                    <div class="col-lg-11 col-md-6 col-12 " >
+                                        <div class="recent-job-item" style="background-color: var(--background-color);">
+                                            <div class="company-info mb-3">
+                                                <div class="clogo-container">
+                                                    <img src="/uploads/<%-employerFound.profileImage%>" class="clogo"></img>
+                                                </div>
+                                                <div class="cname-and-caddress mx-4">
+                                                    <a href="#" class="cname mb-0"><%-employerFound.name%></a>
+                                                    <p class="caddress mb-0"><%-employerFound.location%></p>
+                                                </div>
+                                            </div>
+                                            <div class="job">
+                                                <a href="#" ><%-job.jobTitle%></a>
+                                            </div>
+                                            <p class="job-time"><%-job.jobTime%></p>
+                                            <p class="required-skill"><%-job.requiredSkills%></p>
+                                            <div class="salary-and-button">
+                                                <p class="salary my-auto">Rs.<%-job.salary%><span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                                <a href="#" class="apply-now-btn">Apply Now</a>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <% }) %>         
                                 </div>
                             </div>
                         </div>
-                        <div class="work-and-experience ">
-                            <h3 class="section-heading">Work and Experience</h3>
-                            <div class="border-box-container my-4">
-                                <div class="left-border-box">
-                                    <p class="mb-0"><span class="secondary-heading ">Graphics Design</span><b class=""> // 2022-Present</b></p> 
-                                    <p class="primary-color my-2" ><b>Sofsee Tech</b></p>
-                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
-                                </div>
-                            </div>
-                        </div>
-                       
-                       
-                        
                     </div>
+
+
+
+
+
+
+
+
                     <div class="col-lg-5 col-md-12 col-12 my-lg-5 my-sm-3">
                             <div class="side-boxes p-5 ">
                                 <h3 class="section-heading">Information</h3>
@@ -135,47 +149,57 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="category">Developement</span></p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="category"><%-employerFound.employerCategory%></span></p>
                                             </div>
                                             <!--  Offered Salary -->
                                             <div class="col-6 col-lg-4 col-md-6">
                                                 <p  class="text-black ">
-                                                    Offered Salary   
+                                                    Email 
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="offered-salary">Rs 25,000 / Monthly</span></p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="offered-salary"><%-employerFound.user.email%></span></p>
                                             </div>
                                             
                                             
                                             <!--  Experience -->
                                             <div class="col-6 col-lg-4 col-md-6">
                                                 <p  class="text-black ">
-                                                    Experience   
+                                                    Website   
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="experience"> 05 </span> Years</p>
+                                                :&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%-employerFound.website%>"><%-employerFound.website%></a>
                                             </div>
                                             
                                             <!--  Gender -->
                                             <div class="col-6 col-lg-4 col-md-6">
                                                 <p  class="text-black ">
-                                                    Gender   
+                                                    Since   
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gender"> Male</span> </p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gender"> 2008</span> </p>
                                             </div>
-                                            <!--  Qualification -->
+
                                             <div class="col-6 col-lg-4 col-md-6">
                                                 <p  class="text-black ">
-                                                    Qualification   
+                                                    Location   
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="qualification"> BSc</span> </p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gender"> <%-employerFound.location%></span> </p>
                                             </div>
+
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Phone   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gender"> <%-employerFound.contactNo%></span> </p>
+                                            </div>
+                                            
                                             
                                         </div>
                                 </div>
@@ -213,25 +237,7 @@
         </div>
     </section>
     <footer>
-        <div class="newsletter w-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-12 col-md-12">
-                        <h3 class="text-white newsletter-text" >Subscribe for everyday job Newsletter.</h3>
-                    </div>
-                    <div class="col-lg-6 col-12 col-md-12 ">
-                       <form action="" id="newsletter-form">
-                            <div class="email-subscription">
-                                <div class="input-wrapper">
-                                <input type="email" placeholder="Enter your email address" />
-                                <button type="submit">Subscribe Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <%- include("./components/footer.ejs") %>
 
 </footer>

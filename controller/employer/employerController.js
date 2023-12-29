@@ -1,9 +1,7 @@
-const { users, jobs, employers } = require("../../model")
+const { users, employers, jobs } = require("../../model")
 exports.renderJobPostForm = (req,res)=>{
     res.render("jobPostForm")
 }
-
-
 
 exports.renderCreateEmployerProfile = async (req,res)=>{
     res.render("createEmployerProfileForm" )
@@ -34,19 +32,24 @@ exports.createEmployerProfile = async(req,res)=>{
 exports.employerProfile = async(req,res)=>{
     const {employerId} = req.params
     const employerFound = await  employers.findByPk(employerId,
-
         {include: [
             {
               model: users,
               attributes: { exclude: ['password','createdAt','updatedAt',''] }, // Exclude the 'password' column
             },
         ]})
-        console.log(employerFound,"HELLo")
     if(!employerFound){
         return res.send("No user employer found of this id")
     }
-    res.render('employerProfile', { employerFound });
-    
+    const myJobs = await jobs.findAll({
+        where:{
+            employerId
+        }
+    })
+    if(myJobs.length==0){
+        return res.send("No jobs found")
+    }
+    res.render('employerProfile', { employerFound,myJobs });
 }
 
 exports.postJob = async(req,res)=>{
@@ -80,3 +83,4 @@ exports.postJob = async(req,res)=>{
     return res.send("Job posted succesfully!")
 
 }
+
