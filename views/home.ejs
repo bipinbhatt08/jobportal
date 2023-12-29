@@ -153,182 +153,30 @@
                 <div class="recent-jobs-container">
                     <div class="container ">
                         <div class="row ">
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="recent-job-item">
-                                    <div class="company-info mb-3">
-                                        <div class="clogo-container">
-                                            <img src="/images/company-logo.webp" class="clogo"></img>
+                            <% allJobs.forEach((job)=>{ %>
+                                <div class="col-lg-6 col-md-6 col-12 " >
+                                    <div class="recent-job-item" style="background-color: var(--background-color);">
+                                        <div class="company-info mb-3">
+                                            <div class="clogo-container">
+                                                <img src="/uploads/<%-job.employer.profileImage%>" class="clogo"></img>
+                                            </div>
+                                            <div class="cname-and-caddress mx-4">
+                                                <a href="#" class="cname mb-0"><%-job.employer.name%></a>
+                                                <p class="caddress mb-0"><%-job.employer.location%></p>
+                                            </div>
                                         </div>
-                                        <div class="cname-and-caddress mx-4">
-                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
-                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        <div class="job">
+                                            <a href="#" ><%-job.jobTitle%></a>
                                         </div>
-                                    </div>
-                                    <div class="job">
-                                        <a href="#" >Backend Developer</a>
-                                    </div>
-                                    <p class="job-time">Full-time</p>
-                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-                                    <div class="salary-and-button">
-                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
-                                        <a href="#" class="apply-now-btn">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="recent-job-item">
-                                    <div class="company-info mb-3">
-                                        <div class="clogo-container">
-                                            <img src="/images/company-logo.webp" class="clogo"></img>
-                                        </div>
-                                        <div class="cname-and-caddress mx-4">
-                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
-                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
+                                        <p class="job-time"><%-job.jobTime%></p>
+                                        <p class="required-skill"><%-job.requiredSkills%></p>
+                                        <div class="salary-and-button">
+                                            <p class="salary my-auto">Rs.<%-job.salary%><span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
+                                            <a href="#" class="apply-now-btn">Apply Now</a>
                                         </div>
                                     </div>
-                                    <div class="job">
-                                        <a href="#" >Backend Developer</a>
-                                    </div>
-                                    <p class="job-time">Full-time</p>
-                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-                                    <div class="salary-and-button">
-                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
-                                        <a href="#" class="apply-now-btn">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="recent-job-item">
-                                    <div class="company-info mb-3">
-                                        <div class="clogo-container">
-                                            <img src="/images/company-logo.webp" class="clogo"></img>
-                                        </div>
-                                        <div class="cname-and-caddress mx-4">
-                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
-                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
-                                        </div>
-                                    </div>
-                                    <div class="job">
-                                        <a href="#" >Backend Developer</a>
-                                    </div>
-                                    <p class="job-time">Full-time</p>
-                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-                                    <div class="salary-and-button">
-                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
-                                        <a href="#" class="apply-now-btn">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="recent-job-item">
-                                    <div class="company-info mb-3">
-                                        <div class="clogo-container">
-                                            <img src="/images/company-logo.webp" class="clogo"></img>
-                                        </div>
-                                        <div class="cname-and-caddress mx-4">
-                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
-                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
-                                        </div>
-                                    </div>
-                                    <div class="job">
-                                        <a href="#" >Backend Developer</a>
-                                    </div>
-                                    <p class="job-time">Full-time</p>
-                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-                                    <div class="salary-and-button">
-                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
-                                        <a href="#" class="apply-now-btn">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="recent-job-item">
-                                    <div class="company-info mb-3">
-                                        <div class="clogo-container">
-                                            <img src="/images/company-logo.webp" class="clogo"></img>
-                                        </div>
-                                        <div class="cname-and-caddress mx-4">
-                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
-                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
-                                        </div>
-                                    </div>
-                                    <div class="job">
-                                        <a href="#" >Backend Developer</a>
-                                    </div>
-                                    <p class="job-time">Full-time</p>
-                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-                                    <div class="salary-and-button">
-                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
-                                        <a href="#" class="apply-now-btn">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="recent-job-item">
-                                    <div class="company-info mb-3">
-                                        <div class="clogo-container">
-                                            <img src="/images/company-logo.webp" class="clogo"></img>
-                                        </div>
-                                        <div class="cname-and-caddress mx-4">
-                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
-                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
-                                        </div>
-                                    </div>
-                                    <div class="job">
-                                        <a href="#" >Backend Developer</a>
-                                    </div>
-                                    <p class="job-time">Full-time</p>
-                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-                                    <div class="salary-and-button">
-                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
-                                        <a href="#" class="apply-now-btn">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="recent-job-item">
-                                    <div class="company-info mb-3">
-                                        <div class="clogo-container">
-                                            <img src="/images/company-logo.webp" class="clogo"></img>
-                                        </div>
-                                        <div class="cname-and-caddress mx-4">
-                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
-                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
-                                        </div>
-                                    </div>
-                                    <div class="job">
-                                        <a href="#" >Backend Developer</a>
-                                    </div>
-                                    <p class="job-time">Full-time</p>
-                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-                                    <div class="salary-and-button">
-                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
-                                        <a href="#" class="apply-now-btn">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="recent-job-item">
-                                    <div class="company-info mb-3">
-                                        <div class="clogo-container">
-                                            <img src="/images/company-logo.webp" class="clogo"></img>
-                                        </div>
-                                        <div class="cname-and-caddress mx-4">
-                                            <a href="#" class="cname mb-0">Sofsee Tech.</a>
-                                            <p class="caddress mb-0">Mahendranagar, Nepal</p>
-                                        </div>
-                                    </div>
-                                    <div class="job">
-                                        <a href="#" >Backend Developer</a>
-                                    </div>
-                                    <p class="job-time">Full-time</p>
-                                    <p class="required-skill">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-                                    <div class="salary-and-button">
-                                        <p class="salary my-auto">Rs.35000<span style="font-size: 14px; color: var(--secondary-color); font-weight: 400;">/Monthly</span></p>
-                                        <a href="#" class="apply-now-btn">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
+                                </div>  
+                                <% }) %>  
                         </div>
                     </div>
                 </div>

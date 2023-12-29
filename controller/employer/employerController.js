@@ -84,3 +84,15 @@ exports.postJob = async(req,res)=>{
 
 }
 
+// exports.getAllJob = async(req,res)=>{
+    
+//     const allJobs = await jobs.findAll()
+
+//     if(allJobs.length===0){
+//         return res.send("No jobs")
+//     }
+
+//     res.render("home",{alljobs})
+
+// }
+
