@@ -47,24 +47,25 @@
     </section>
     <section class="section pb-5">
         <div class="container">
+            <% const {name,address,profession,email,resume,contactNo,age,offeredSalary,profile,about,college,qualification,educationDescription,experiencePosition,experienceDescription,organization,level,gender,experience,facebook,instagram,github,twitter,linkedin,skills}=candidate %>
             <!-- First row start -->
            <div class="job-detail-first-row p-5">
             <div class="row">
                 <div class="col-lg-6 col-md-7 col-12  display-flex   job-detail-job-and-salary">
                     <div class="job-detail-company-logo my-auto">
-                        <img src="https://media.licdn.com/dms/image/C4E03AQEvK6NX6ui0eQ/profile-displayphoto-shrink_800_800/0/1647097725077?e=2147483647&v=beta&t=RVMRGIaUmVUnSugnOVuZ7v-KveohZzRfRcUqYecxOFM" alt="">
+                        <img src="/uploads/<%- profile %>" alt="">
                     </div>
                     <div class="job-detail-info mx-4 my-auto">
-                        <h3 class="section-heading job-detail-job my-1">Bhaskar Saud</h3>
-                        <p class="job-detail-company-name my-1">Frontend Developer</p>
-                        <p class="job-detail-company-address "><i class="fa-solid fa-location-dot"></i> Mahendranagar&nbsp; <i class="fa-solid fa-phone"></i> +977 9810779998</p>
+                        <h3 class="section-heading job-detail-job my-1"><%- name  %></h3>
+                        <p class="job-detail-company-name my-1"><%- profession  %></p>
+                        <p class="job-detail-company-address "><i class="fa-solid fa-location-dot"></i> <%- address  %>&nbsp; <i class="fa-solid fa-phone"></i> <%- contactNo  %></p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-5 col-12 my-auto company-and-job ">
                     <div class="candiate-detail-buttons my-3">
-                            <div><a href="#" class="apply-now-btn job-detail-apply-btn " id="upper-button">&nbsp; &nbsp; &nbsp;Send Email &nbsp;&nbsp; &nbsp; &nbsp;</a></div>
+                            <div><a href="mailto:<%- email %>" class="apply-now-btn job-detail-apply-btn " id="upper-button">&nbsp; &nbsp; &nbsp;Send Email &nbsp;&nbsp; &nbsp; &nbsp;</a></div>
                             
-                            <div><a href="#" class="apply-now-btn job-detail-apply-btn">Download Resume</a></div>
+                            <div><a href="/uploads/<%-resume  %>" class="apply-now-btn job-detail-apply-btn" download="<%-resume  %>">Download Resume</a></div>
                     </div>
                 </div>
             </div>
@@ -79,8 +80,7 @@
                         <div class="description ">
                             <h3 class="section-heading mt-2">About Candidate</h3>
 
-                            <p>It is a long established fact that a reader will be distracted the readable content of page when looking atits layout. The point of using is that has more-or-less normal a distribution of letters, as opposed to usin content publishing packages web page editors. It is a long established fact that a reader will be distracts by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that has look like readable publishing packages and web page editors.
-
+                            <p><%-about  %>
                             </p>
 
                         </div>
@@ -89,11 +89,10 @@
                             <div class="col-lg-12"><div class="software-skill">
                                 <h3 class="section-heading mt-2"> Skills</h3>
                                 <ul>
-                                    <li>Adobe Photoshop</li>
-                                    <li>Figma</li>
-                                    <li>Microsoft Word</li>
-                                    <li>Microsoft Excel</li>
-                                    <li>Microsoft PowerPoint</li>   
+                                    <% const arr = skills.split(",");
+                                       arr.forEach(element => { %>
+                                           <li><%- element.trim() %></li>
+                                    <% }); %>
                                 </ul>
                             </div></div>
                         </div>
@@ -101,9 +100,9 @@
                             <h3 class="section-heading">Education</h3>
                             <div class="border-box-container my-4">
                                 <div class="left-border-box">
-                                    <p class="mb-0"><span class="secondary-heading ">Graphics Design</span><b class=""> // 2021-2022</b></p> 
-                                    <p class="primary-color my-2" ><b>IT Zone Computer</b></p>
-                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                                    <p class="mb-0"><span class="secondary-heading "><%-qualification  %></span></p> 
+                                    <p class="primary-color my-2" ><b><%-college  %></b></p>
+                                    <p><%- educationDescription %></p>
                                 </div>
                             </div>
                         </div>
@@ -111,9 +110,9 @@
                             <h3 class="section-heading">Work and Experience</h3>
                             <div class="border-box-container my-4">
                                 <div class="left-border-box">
-                                    <p class="mb-0"><span class="secondary-heading ">Graphics Design</span><b class=""> // 2022-Present</b></p> 
-                                    <p class="primary-color my-2" ><b>Sofsee Tech</b></p>
-                                    <p>It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout the point of using is that has moreo less normal a distribution letters content publishing packages web page editors.</p>
+                                    <p class="mb-0"><span class="secondary-heading "><%- experiencePosition %></span></p> 
+                                    <p class="primary-color my-2" ><b><%- organization %></b></p>
+                                    <p><%- experienceDescription %></p>
                                 </div>
                             </div>
                         </div>
@@ -131,20 +130,20 @@
                                             <!--  Category -->
                                             <div class="col-6 col-lg-4 col-md-6">
                                                 <p  class="text-black ">
-                                                    Category   
+                                                     Level  
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="category">Developement</span></p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="category"> <%- level%></span></p>
                                             </div>
                                             <!--  Offered Salary -->
                                             <div class="col-6 col-lg-4 col-md-6">
                                                 <p  class="text-black ">
-                                                    Offered Salary   
+                                                   Offered Salary 
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="offered-salary">Rs 25,000 / Monthly</span></p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="offered-salary">Rs <%- offeredSalary %> / Monthly</span></p>
                                             </div>
                                             
                                             
@@ -155,7 +154,7 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="experience"> 05 </span> Years</p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="experience"> <%- experience %> </span> Years</p>
                                             </div>
                                             
                                             <!--  Gender -->
@@ -165,7 +164,16 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gender"> Male</span> </p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gender"> <%- gender %> </span> </p>
+                                            </div>
+
+                                            <div class="col-6 col-lg-4 col-md-6">
+                                                <p  class="text-black ">
+                                                    Age   
+                                                </p>
+                                            </div>
+                                            <div class="col-6 col-lg-8 col-md-6">
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gender"> <%- age %></span> </p>
                                             </div>
                                             <!--  Qualification -->
                                             <div class="col-6 col-lg-4 col-md-6">
@@ -174,7 +182,7 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 col-lg-8 col-md-6">
-                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="qualification"> BSc</span> </p>
+                                                <p >:&nbsp;&nbsp;&nbsp;&nbsp;<span id="qualification"><%- qualification %></span> </p>
                                             </div>
                                             
                                         </div>
@@ -187,22 +195,21 @@
                                 <div class="container px-0">
                                     <div class="row">
                                         <div class="col-lg-2-col-md-2 col-2 side-box-icon-container ">
-                                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                            <a href="<%- facebook %>"><i class="fa-brands fa-facebook"></i></a>
                                         </div>
                                         <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
-                                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                            <a href="<%- twitter %>"><i class="fa-brands fa-twitter"></i></a>
                                         </div>
                                         <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
-                                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                            <a href="<%- linkedin %>"><i class="fa-brands fa-linkedin"></i></a>
                                         </div>
                                         <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
-                                        <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                                        <a href="<%- instagram %>"> <i class="fa-brands fa-instagram"></i></a>
                                         </div>
                                         <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
-                                        <a href=""> <i class="fa-brands fa-skype"></i></a>
+                                        <a href="<%- github %>"> <i class="fa-brands fa-github"></i></a>
                                         </div>
-                                        <div class="col-lg-2-col-md-2 col-2 side-box-icon-container">
-                                        <a href=""> <i class="fa-brands fa-whatsapp"></i></a>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -213,25 +220,6 @@
         </div>
     </section>
     <footer>
-        <div class="newsletter w-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-12 col-md-12">
-                        <h3 class="text-white newsletter-text" >Subscribe for everyday job Newsletter.</h3>
-                    </div>
-                    <div class="col-lg-6 col-12 col-md-12 ">
-                       <form action="" id="newsletter-form">
-                            <div class="email-subscription">
-                                <div class="input-wrapper">
-                                <input type="email" placeholder="Enter your email address" />
-                                <button type="submit">Subscribe Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         <%- include("./components/footer.ejs") %>
 
 </footer>

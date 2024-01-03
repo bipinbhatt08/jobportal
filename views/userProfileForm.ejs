@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finate | Job Portal - Post a job</title>
+    <title>Finate | Job Portal - Create Profile</title>
     <!-- Bootstrap JS -->
 
     <!-- custom css included -->
@@ -28,8 +28,8 @@
         <!-- =====BreadCrumb   start=====-->
         <div class="container breadcrumbs-container my5">
                 <div class="breadcrumb my-auto">
-                    <h1 class=" hero-heading  ">Post a job</h1>   
-                    <p class="paragraph-text nav-item"><a href="/" class="">Home </a> <span class="active-page"> &nbsp;// Post a job</span></p>
+                    <h1 class=" hero-heading  ">Create Profile</h1>   
+                    <p class="paragraph-text nav-item"><a href="/" class="">Home </a> <span class="active-page"> &nbsp;// Create Profile</span></p>
                 </div>          
         </div>
     </section>
@@ -37,48 +37,53 @@
         <div class="container">
            <div class="row">
             <div class="col-lg-12 col-md-12 col-12" >
-                <form action="" method="post" class="dashboard-form p-5">
+                <form action="/createCandidateProfile" enctype="multipart/form-data" method="post" class="dashboard-form p-5">
                      <div class="basic-information  mb-5" id="basic-information">
                              <h3 class="section-heading"> Basic Information</h3>
                              <hr class="heading-underline  mb-4">
                              <div class="row">
                                  <div class="col-lg-12 mb-3">
-                                 <input type="text" class="w-100" name="fullname" placeholder="Full Name">
+                                 <input type="text" class="w-100" name="name" placeholder="Full Name">
                                  </div>
                                  <div class="col-lg-6 mb-3">
                                      <div class="profile-input d-flex" style="display: flex; justify-content: space-between; align-items: center;">
                                         <label for="profile-input">Profile Photo:</label>
-                                         <input type="file" name="" id="profile-input" class="w-75"  >
+                                         <input type="file" name="profile" id="profile-input" class="w-75"  >
                                      </div>
                                  </div>
                                  <div class="col-lg-6 mb-3">
+                                    <input type="number" class="w-100" name="age" placeholder="Age">
+                                </div>
+                                 <div class="col-lg-6 mb-3">
                                      <div class="gender ">
                                          <label for="gender">Gender: </label>
-                                        <input type="radio"> Male &nbsp; &nbsp;<input type="radio"> Female &nbsp; &nbsp;<input type="radio"> Others
+                                        <input type="radio" name="gender" value="Male"> Male &nbsp; &nbsp;<input type="radio" name="gender" value="Female"> Female &nbsp; &nbsp;<input type="radio" name="gender"value="Others"> Others
                                      </div>
                                  </div>
                                  <div class="col-lg-6 mb-3">
                                      <input type="text" class="w-100" name="address" placeholder="Address">
                                  </div>
                                  <div class="col-lg-6 mb-3">
-                                     <input type="number" class="w-100" name="phone_number" placeholder="Phone no.">
+                                     <input type="number" class="w-100" name="contactNo" placeholder="Phone no.">
                                  </div>
                                  <div class="col-lg-6 mb-3 ">
                                      <input type="email" class="w-100" name="email" placeholder="Email">
                                  </div>
                                  
                                  <div class="col-lg-6 mb-3">
-                                     <input type="text" name="language" id="" placeholder="Languages(comma separated)" class="w-100">
+                                     <input type="text" name="skills" id="" placeholder="Skills(comma separated)" class="w-100">
                                  </div>
                                  <div class="col-lg-6 mb-3">
-                                     <input type="text">
-                                 </div>
-                                 <div class="col-lg-6 mb-3">
-                                     <input type="text">
-                                 </div>
+                                    <input type="text" name="about" id="" placeholder="About" class="w-100">
+                                </div>
                                  
                                  <div class="col-lg-6 mb-3">
-                                     <input type="number" class="w-100" name="offered-salary" placeholder="Offered Salary">
+                                    <input type="text" name="profession" id="" placeholder="Position(eg.Frontend developer)" class="w-100">
+                                </div>
+                                 
+                                 
+                                 <div class="col-lg-6 mb-3">
+                                     <input type="number" class="w-100" name="offeredSalary" placeholder="Offered Salary">
                                  </div>
                                  <div class="col-lg-6 mb-3">
                                      <select name="level" id="" class="w-100">
@@ -95,7 +100,7 @@
                                  <div class="col-lg-6 mb-3">
                                      <div class="cv-input d-flex" style="display: flex; justify-content: space-between; align-items: center;">
                                         <label for="cv-input">CV File:</label>
-                                         <input type="file" name="" id="cv-input" class="w-75"  >
+                                         <input type="file" name="resume" id="cv-input" class="w-75"  >
                                      </div>
                                  </div>
                                  
@@ -111,7 +116,7 @@
                                      <input type="url" class="w-100" name="facebook" placeholder="Facebook URL">
                                  </div>
                                  <div class="col-lg-6 mb-3">
-                                     <input type="url" class="w-100" name="instragram" placeholder="Instagram URL">
+                                     <input type="url" class="w-100" name="instagram" placeholder="Instagram URL">
                                  </div>
                                  <div class="col-lg-6 mb-3">
                                      <input type="url" class="w-100" name="twitter" placeholder="Twitter URL">
@@ -120,7 +125,7 @@
                                      <input type="url" class="w-100" name="linkedin" placeholder="Linkedin URL">
                                  </div>
                                  <div class="col-lg-6 ">
-                                     <input type="url" class="w-100" name="skype" placeholder="Skype URL">
+                                     <input type="url" class="w-100" name="github" placeholder="Github URL">
                                  </div>
                                  
                              </div>
@@ -128,17 +133,35 @@
                      <div class="Education mb-5" id="education">
                          <h3 class="section-heading"> Education </h3>
                          <hr class="heading-underline  ">
+                         <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" class="w-100" name="qualification" placeholder="Degree ">
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" class="w-100" name="college" placeholder="School/College/University ">
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" class="w-100" name="educationDescription" placeholder="Description ">
+                            </div>
+                        </div>
                      </div>
                      <div class="experience  mb-5"id="experience">
                          <h3 class="section-heading"> Work Experience </h3>
                          <hr class="heading-underline  ">
+                         <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" class="w-100" name="experiencePosition" placeholder="Position ">
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" class="w-100" name="organization" placeholder="Organization ">
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" class="w-100" name="experienceDescription" placeholder="Description ">
+                            </div>
+                        </div>
                          
                      </div>
-                     <div class="candidate-skills mb-5" id="candidate-skills">
-                         <h3 class="section-heading"> Professional Skill </h3>
-                         <hr class="heading-underline  ">
-                     </div>
-                     <button type="submit" class="apply-now-btn w-100 py-3">Save & Update</button>
+                     <button type="submit" class="apply-now-btn w-100 py-3">Create Profile</button>
                 </form>
              </div>
             </div>
