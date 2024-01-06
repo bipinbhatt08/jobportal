@@ -1,4 +1,4 @@
-const { renderCandidateProfile, renderCreateProfile, createCandidateProfile } = require("../../controller/candidate/candidateController")
+const { renderCandidateProfile, renderCreateProfile, createCandidateProfile, applyJob } = require("../../controller/candidate/candidateController")
 const { isAuthenticated } = require("../../middlewares/isAuthenticated");
 
 const router = require("express").Router()
@@ -13,4 +13,6 @@ router.route("/createCandidateProfile").get(renderCreateProfile).post(
 ]),
 createCandidateProfile)
 
+
+router.route("/apply/:jobId").get(isAuthenticated,applyJob)
 module.exports = router

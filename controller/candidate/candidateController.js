@@ -1,4 +1,4 @@
-const { candidates, users } = require("../../model")
+const { candidates, users, appliedjobs, appliedJobs } = require("../../model")
 
 exports.renderCandidateProfile =async (req,res)=>{
 
@@ -30,3 +30,28 @@ exports.createCandidateProfile = async(req,res)=>{
     res.send("Profile created succesfully")
 }
 
+
+exports.applyJob = async(req,res)=>{
+    const userId = req.user.id
+    const jobId = req.params.jobId
+    const candidateExist  = await candidates.findOne({
+        where:{
+            userId
+        }
+    })
+    if(!candidateExist){
+        return res.send("You must login.")
+    }
+    const appliedBefore = await appliedJobs.findOne({
+        where:{
+            candidateId: candidateExist.id,
+            jobId
+        }
+    })
+    if(appliedBefore){
+        return res.send("You have already applied for this job.")
+    }
+    appliedJobs.create({candidateId:candidateExist.id,jobId})
+
+    res.send("Applied successfully")
+}
